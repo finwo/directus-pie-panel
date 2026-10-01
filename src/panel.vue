@@ -67,6 +67,10 @@ export default defineComponent({
 			type: Boolean,
 			default: true,
 		},
+		legendPosition: {
+			type: String,
+			default: 'bottom',
+		},
 		showDataLabel: {
 			type: Boolean,
 			default: true,
@@ -104,6 +108,7 @@ export default defineComponent({
 				() => props.labelGrouping,
 				() => props.sortDirection,
 				() => props.showLegend,
+				() => props.legendPosition,
 				() => props.showDataLabel,
 			],
 			() => {
@@ -230,7 +235,7 @@ export default defineComponent({
 					},
 					legend: {
 						show: props.showLegend,
-						position: 'bottom',
+						position: props.legendPosition,
 						markers: {
 							shape: 'circle',
 						},

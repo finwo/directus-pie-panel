@@ -170,6 +170,34 @@ export default definePanel({
 			},
 		},
 		{
+			field: 'legendPosition',
+			type: 'string',
+			name: 'Legend Position',
+			meta: {
+				interface: 'select-dropdown',
+				options: {
+					choices: [
+						{
+							value: 'bottom',
+							text: 'Bottom',
+						},
+						{
+							value: 'right',
+							text: 'Right',
+						},
+						{
+							value: 'left',
+							text: 'Left',
+						},
+					],
+				},
+				width: 'half',
+			},
+			schema: {
+				default_value: 'bottom',
+			},
+		},
+		{
 			field: 'showDataLabel',
 			name: '$t:show_data_label',
 			type: 'boolean',
