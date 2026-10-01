@@ -60,6 +60,7 @@ export default definePanel({
 				options: {
 					collectionField: 'collection',
 					placeholder: '$t:select_a_field',
+					allowPrimaryKey: true,
 				},
 				width: 'half',
 			},
